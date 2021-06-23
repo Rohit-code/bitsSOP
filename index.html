@@ -53,12 +53,59 @@
 					<li> <a href="#team" class="smoothScroll">Team</a></li>
 					<li> <a href="#contact" class="smoothScroll">Contact</a></li>
 					<li> <a href="#team" class="smoothScroll">Year</a></li>
-					</div>	
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Year
+						<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+						  <li><a onclick='return showperson("y2001");' href="#y2001">2001</a></li>
+						  <li><a onclick='return showperson("y2002");' href="#y2002">2002</a></li>
+						  <li><a onclick='return showperson("y2003");' href="#y2003">2003</a></li>
+						  <li><a onclick='return showperson("y2004");' href="#y2004">2004</a></li>
+						  <li><a onclick='return showperson("y2005");' href="#y2005">2005</a></li>
+						  <li><a onclick='return showperson("y2006");' href="#y2006">2006</a></li>
+						  <li><a onclick='return showperson("y2007");' href="#y2007">2007</a></li>
+						  <li><a onclick='return showperson("y2008");' href="#y2008">2008</a></li>
+						</ul>
+					</li>
+					  
 				</ul>
 	        </div><!--/.nav-collapse -->
 	      </div>
 	    </div>
     </div>
+	
+	<style>
+	@media all and (min-width: 992px) {
+		.navbar .nav-item .dropdown-menu{ display: none; }
+		.navbar .nav-item:hover .nav-link{   }
+		.navbar .nav-item:hover .dropdown-menu{ display: block; }
+		.navbar .nav-item .dropdown-menu{ margin-top:0; }
+	}
+	</style>
+	
+	<script>
+		$(document).ready(function(){
+			for(var y=2001; y<=2008; y++)
+			{
+				document.getElementById("y"+y).style='display:none;';
+			}
+		});
+		function showperson(pid)
+		{
+			for(var y=2001; y<=2008; y++)
+			{
+				if("y"+y==pid)
+				{
+					document.getElementById("y"+y).style='display:block;';
+				}
+				else 
+				{
+					document.getElementById("y"+y).style='display:none;';
+				}
+			}
+			return true;
+		}
+	</script>
 
   
   
@@ -137,9 +184,9 @@
 				<h1 class="fade-down centered">MEET OUR SOP TEAM</h1>
 				<hr class="fade-down title-mb">
 
-				<div class="col-md-4 ">
+				<div class="col-md-4 " id="y2001">
 					<div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
-						<img class="img team-image" src="images/Aryan Choudhary.jpg" alt="">
+						<img class="img team-image" src="images/Aryan Choudhary.jpeg" alt="">
 						
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-9 fade-up team-info">
@@ -149,7 +196,8 @@
 					</div>
 				</div>
 				
-				<div class="col-md-4">
+				
+				<div class="col-md-4"  id="y2002">
 					<div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
 						<img class="img team-image" src="images/Rohit Boni1.jpg" alt="">
 					</div>
@@ -159,13 +207,13 @@
 					</div>
 				</div>
 				
-				<div class="col-md-4">
+				<div class="col-md-4"  id="y2003">
 					<div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
-						<img class="img team-image" src="images/Vedang Phadke.jpg" alt="">
+						<img class="img team-image" src="images/Vedang Phadke.jpeg" alt="">
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-9 fade-up team-info">
 						<h4>Vedang Phadke</h4>
-						<p>Schooling done in Delhi Public School, Pune and now followed by pursuing chemical engineering currently in second year in BITS pilani, Goa Campus.My interests are programming, gaming. <br>My role is <b>coder</b></p>
+						<p>Educational Background : Schooling done in Delhi Public School, Pune and now followed by pursuing chemical engineering currently in second year in BITS pilani, Goa Campus.My interests are programming, gaming. <br>My role is <b>coder</b></p>
 					</div>
 				</div>
 				
@@ -174,9 +222,9 @@
 		<!-- 2nd row -->
 			<div class="row white centered">
 				
-				<div class="col-md-4">
+				<div class="col-md-4"  id="y2004">
 					<div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
-						<img class="img team-image" src="images/Sandeep Dhumale.jpg" alt="">
+						<img class="img team-image" src="images/Sandeep Dhumale.jpeg" alt="">
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-9 fade-up team-info">
 						<h4>Satvik Dhumale</h4>
@@ -184,9 +232,9 @@
 					</div>
 				</div>
 
-				<div class="col-md-4">
+				<div class="col-md-4"  id="y2005">
 					<div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
-						<img class="img team-image" src="images/eash.jpg" alt="">
+						<img class="img team-image" src="images/eash.jpeg" alt="">
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-9 fade-up team-info">
 						<h4>Eash Srinivas Vrudhula</h4>
@@ -194,9 +242,9 @@
 					</div>
 				</div>
 
-				<div class="col-md-4">
+				<div class="col-md-4"  id="y2006">
 					<div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
-						<img class="img team-image" src="images/yash.jpg" alt="">
+						<img class="img team-image" src="images/yash.jpeg" alt="">
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-9 fade-up team-info">
 						<h4>YASH JOSHI</h4>
@@ -209,7 +257,7 @@
 			<!-- 3rd row -->
 			<div class="row white centered">
 				
-				<div class="col-md-4">
+				<div class="col-md-4"  id="y2007">
 					<div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
 						<img class="img team-image" src="images/Pragun Nanda.jpg" alt="">
 					</div>
@@ -219,9 +267,9 @@
 					</div>
 				</div>
 
-				<div class="col-md-4">
+				<div class="col-md-4"  id="y2008">
 					<div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
-						<img class="img team-image" src="images/Ishaan Sharma.jpg" alt="">
+						<img class="img team-image" src="images/Ishaan Sharma.jpeg" alt="">
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-9 fade-up team-info">
 						<h4>ISHAAN SHARMA</h4>
@@ -268,7 +316,10 @@
 					<h3>Contact Information</h3>
 					<p><span class="icon icon-home"></span>DH, AH, CH hostels<br/>
 						<span class="icon icon-phone"></span>any contact number<br/>
-						<span class="icon icon-envelop"></span> <a href="#">rohitboni@gmail.com</a><br/>
+						<span class="icon icon-mobile"></span>any contact number<br/>
+						<span class="icon icon-envelop"></span> <a href="#">email@bitsgoa.com</a><br/>
+						<span class="icon icon-twitter"></span> <a href="#">@bitspilani.com</a> <br/>
+						<span class="icon icon-facebook"></span> <a href="#">bitsgoa</a> <br/>
 					</p>
 				</div><!-- col -->
 				<div class="col-md-4 fade-up">
