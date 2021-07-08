@@ -56,14 +56,14 @@
 						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Year
 						<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-						  <li><a onclick='return showperson("y2001");' href="#y2001">2001</a></li>
-						  <li><a onclick='return showperson("y2002");' href="#y2002">2002</a></li>
-						  <li><a onclick='return showperson("y2003");' href="#y2003">2003</a></li>
-						  <li><a onclick='return showperson("y2004");' href="#y2004">2004</a></li>
-						  <li><a onclick='return showperson("y2005");' href="#y2005">2005</a></li>
-						  <li><a onclick='return showperson("y2006");' href="#y2006">2006</a></li>
-						  <li><a onclick='return showperson("y2007");' href="#y2007">2007</a></li>
-						  <li><a onclick='return showperson("y2008");' href="#y2008">2008</a></li>
+						  <li><a onclick='return showperson("y2021");' href="#y2021">2021</a></li>
+						  <li><a onclick='return showperson("y2022");' href="#y2022">2022</a></li>
+						  <li><a onclick='return showperson("y2023");' href="#y2023">2023</a></li>
+						  <li><a onclick='return showperson("y2024");' href="#y2024">2024</a></li>
+						  <li><a onclick='return showperson("y2025");' href="#y2025">2025</a></li>
+						  <li><a onclick='return showperson("y2026");' href="#y2026">2026</a></li>
+						  <li><a onclick='return showperson("y2027");' href="#y2027">2027</a></li>
+						  <li><a onclick='return showperson("y2028");' href="#y2028">2028</a></li>
 						</ul>
 					</li>
 					  
@@ -84,18 +84,20 @@
 	
 	<script>
 		$(document).ready(function(){
-			for(var y=2001; y<=2008; y++)
+			for(var y=2021; y<=2028; y++)
 			{
 				document.getElementById("y"+y).style='display:none;';
 			}
 		});
 		function showperson(pid)
 		{
-			for(var y=2001; y<=2008; y++)
+			for(var y=2021; y<=2028; y++)
 			{
 				if("y"+y==pid)
 				{
 					document.getElementById("y"+y).style='display:block;';
+					var info = document.querySelector("#"+ pid + " .team-info");
+					info.style.display = 'none';
 				}
 				else 
 				{
@@ -103,6 +105,10 @@
 				}
 			}
 			return true;
+		}
+		function showInfo(id){
+			var info = document.querySelector("#" + id + " .team-info");
+			info.style.display = 'block';
 		}
 	</script>
 
@@ -168,9 +174,9 @@
 				<h1 class="fade-down centered">MEET OUR SOP TEAM</h1>
 				<hr class="fade-down title-mb">
 
-				<div class="col-md-4 " id="y2001">
+				<div class="col-md-4 " id="y2021">
 					<div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
-						<img class="img team-image" src="images/Aryan Choudhary.jpg" alt="">
+						<img class="img team-image" onclick="showInfo('y2021')" src="images/Aryan Choudhary.jpg" alt="">
 						
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-9 fade-up team-info">
@@ -181,9 +187,9 @@
 				</div>
 				
 				
-				<div class="col-md-4"  id="y2002">
+				<div class="col-md-4"  id="y2022">
 					<div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
-						<img class="img team-image" src="images/Rohit Boni1.jpg" alt="">
+						<img class="img team-image" onclick="showInfo('y2022')" src="images/Rohit Boni1.jpg" alt="">
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-9 fade-up team-info">
 						<h4>Rohit Boni</h4>
@@ -191,9 +197,9 @@
 					</div>
 				</div>
 				
-				<div class="col-md-4"  id="y2003">
+				<div class="col-md-4"  id="y2023">
 					<div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
-						<img class="img team-image" src="images/Vedang Phadke.jpg" alt="">
+						<img class="img team-image" onclick="showInfo('y2023')" src="images/Vedang Phadke.jpg" alt="">
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-9 fade-up team-info">
 						<h4>Vedang Phadke</h4>
@@ -206,9 +212,9 @@
 		<!-- 2nd row -->
 			<div class="row white centered">
 				
-				<div class="col-md-4"  id="y2004">
+				<div class="col-md-4"  id="y2024">
 					<div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
-						<img class="img team-image" src="images/Sandeep Dhumale.jpg" alt="">
+						<img class="img team-image" onclick="showInfo('y2024')"  src="images/Sandeep Dhumale.jpg" alt="">
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-9 fade-up team-info">
 						<h4>Satvik Dhumale</h4>
@@ -216,9 +222,9 @@
 					</div>
 				</div>
 
-				<div class="col-md-4"  id="y2005">
+				<div class="col-md-4"  id="y2025">
 					<div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
-						<img class="img team-image" src="images/eash.jpg" alt="">
+						<img class="img team-image" onclick="showInfo('y2025')"  src="images/eash.jpg" alt="">
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-9 fade-up team-info">
 						<h4>Eash Srinivas Vrudhula</h4>
@@ -226,9 +232,9 @@
 					</div>
 				</div>
 
-				<div class="col-md-4"  id="y2006">
+				<div class="col-md-4"  id="y2026">
 					<div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
-						<img class="img team-image" src="images/yash.jpg" alt="">
+						<img class="img team-image" onclick="showInfo('y2026')"  src="images/yash.jpg" alt="">
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-9 fade-up team-info">
 						<h4>YASH JOSHI</h4>
@@ -241,9 +247,9 @@
 			<!-- 3rd row -->
 			<div class="row white centered">
 				
-				<div class="col-md-4"  id="y2007">
+				<div class="col-md-4"  id="y2027">
 					<div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
-						<img class="img team-image" src="images/Pragun Nanda.jpg" alt="">
+						<img class="img team-image" onclick="showInfo('y2027')" src="images/Pragun Nanda.jpg" alt="">
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-9 fade-up team-info">
 						<h4>Pragun Nanda</h4>
@@ -251,9 +257,9 @@
 					</div>
 				</div>
 
-				<div class="col-md-4"  id="y2008">
+				<div class="col-md-4"  id="y2028">
 					<div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
-						<img class="img team-image" src="images/Ishaan Sharma.jpg" alt="">
+						<img class="img team-image" onclick="showInfo('y2028')" src="images/Ishaan Sharma.jpg" alt="">
 					</div>
 					<div class="col-md-9 col-sm-9 col-xs-9 fade-up team-info">
 						<h4>ISHAAN SHARMA</h4>
@@ -278,15 +284,15 @@
 			<br>
 				<h1 class="centered fade-down">THANKS FOR VISITING US</h1>
 				<hr class="fade-down title-mb">
-				<div class="col-md-4 fade-up">
+				
 					<h3>Contact Information</h3>
 					<p><span class="icon icon-home"></span>Dr. Sharad Sontakke<br/>
-						<span class="icon icon-phone"></span>Associate Professor,<br/>
-						<span class="icon icon-mobile"></span>Department of Chemical Engineering<br/>
-						<span class="icon icon-envelop"></span>  BIRLA INSTITUTE OF TECHNOLOGY & SCIENCE, PILANI<br/>
-						<span class="icon icon-twitter"></span> K.K.BIRLA GOA CAMPUS, GOA <br/>
-						<span class="icon icon-facebook"></span> <a href="#">E-mail: sharads@goa.bits-pilani.ac.in  </a> <br/>
-						<span class="icon icon-envelop"></span> <a href="#">Web Developer - Mr.Rohit Boni(bonirohit@gmail.com)</a><br/>
+						<span class="icon icon-home"></span>Associate Professor,<br/>
+						<span class="icon icon-home"></span>Department of Chemical Engineering<br/>
+						<span class="icon icon-home"></span>  BIRLA INSTITUTE OF TECHNOLOGY & SCIENCE, PILANI<br/>
+						<span class="icon icon-home"></span> K.K.BIRLA GOA CAMPUS, GOA <br/>
+						<span class="icon icon-envelop"></span> E-mail: <span class="icon icon-facebook"></span> <a href="#">sharads@goa.bits-pilani.ac.in  </a> <br/>
+						<span class="icon icon-envelop"></span> Web Developer - Mr.Rohit Boni <span class="icon icon-envelop"></span> <a href="#">(bonirohit@gmail.com)</a><br/>
 					</p>
 				
 
